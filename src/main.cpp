@@ -1,3 +1,8 @@
+//
+// Created by manish on 01-06-2024.
+//
+
+#include "silverocto-lib.h"
 // #############################################################################
 //                           Platform Globals
 // #############################################################################
@@ -83,7 +88,6 @@ bool platform_create_window(int width, int height, const char *title)
 
 void platform_update_window() {
     MSG msg;
-
     while (PeekMessageA(&msg, window, 0, 0, PM_REMOVE)) {
         TranslateMessage(&msg);
         DispatchMessageA(&msg);
@@ -100,6 +104,6 @@ int main()
     {
         platform_update_window();
     }
-
+    SM_TRACE("Stopped");
     return 0;
 }
