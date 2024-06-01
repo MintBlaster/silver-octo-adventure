@@ -104,6 +104,5 @@ int main()
     {
         platform_update_window();
     }
-    SM_TRACE("Stopped");
     return 0;
 }
